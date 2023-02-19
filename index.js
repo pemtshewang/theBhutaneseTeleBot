@@ -22,11 +22,7 @@ const getTopNews = async () => {
   }
 };
 
-<<<<<<< HEAD
 bot.setWebHook(process.env.URL);
-=======
-bot.setWebHook(webhookUrl);
->>>>>>> origin/main
 bot.onText(/\/topnews/, async (msg) => {
   const chatId = msg.chat.id;
   const headlines = await getTopNews();
