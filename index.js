@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const cheerio = require('cheerio');
-
+const webhookUrl = process.env.BOT_WEBHOOK_URL;
 const bot = new TelegramBot(process.env.TOKEN,{ polling: true });
 
 const getTopNews = async () => {
@@ -22,7 +22,11 @@ const getTopNews = async () => {
   }
 };
 
+<<<<<<< HEAD
 bot.setWebHook(process.env.URL);
+=======
+bot.setWebHook(webhookUrl);
+>>>>>>> origin/main
 bot.onText(/\/topnews/, async (msg) => {
   const chatId = msg.chat.id;
   const headlines = await getTopNews();
