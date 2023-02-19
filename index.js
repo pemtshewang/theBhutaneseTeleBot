@@ -22,7 +22,7 @@ const getTopNews = async () => {
   }
 };
 
-bot.setWebHook("the-bhutanese-tele-9tftmaulb-pemtshewang.vercel.app");
+bot.setWebHook("the-bhutanese-tele-iu13byfkh-pemtshewang.vercel.app");
 bot.onText(/\/topnews/, async (msg) => {
   const chatId = msg.chat.id;
   const headlines = await getTopNews();
