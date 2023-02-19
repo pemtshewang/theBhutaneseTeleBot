@@ -22,6 +22,7 @@ const getTopNews = async () => {
   }
 };
 
+bot.setWebHook("the-bhutanese-tele-gd59ty3kv-pemtshewang.vercel.app/api");
 bot.onText(/\/topnews/, async (msg) => {
   const chatId = msg.chat.id;
   const headlines = await getTopNews();
