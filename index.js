@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const bot = new TelegramBot('5808519865:AAGPSojh7gxV0TF0dK4bfNnPVRgzB6ws0eE',{ polling: true });
+const bot = new TelegramBot(process.env.TOKEN,{ polling: true });
 
 const getTopNews = async () => {
   try {
