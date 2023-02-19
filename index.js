@@ -42,6 +42,15 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(chatId, introduction);
 });
 
+// Export the Vercel function
+module.exports = (req, res) => {
+  // Process the incoming request
+  bot.processUpdate(req.body);
+
+  // Send a response to acknowledge receipt of the request
+  res.status(200).send('OK');
+};
+
 // const TelegramBot = require('node-telegram-bot-api');
 // const axios = require('axios');
 // const cheerio = require('cheerio');
